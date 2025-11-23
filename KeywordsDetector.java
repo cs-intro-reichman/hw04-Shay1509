@@ -17,10 +17,60 @@ public class KeywordsDetector {
         String[] keywords = {"synergy", "disrupt", "leverage", "Paradigm", "transform"};
         detectAndPrint(sentences, keywords);
     }
+    
+
+
+    public static boolean isEquals(String word, String [] keywords){
+        boolean equal = false;
+        int n = 0;
+
+        String loweredWord = word.toLowerCase();
+        while(n < keywords.length){
+            if(loweredWord.equals(keywords[n].toLowerCase())){
+                equal = true;
+            }
+            n++;
+        }
+        return equal;
+     }   
+
 
     // Iterates through all the sentences.
     // If a sentence contains one or more of the kewords, prints it.
     public static void detectAndPrint(String[] sentences, String[] keywords) {
-        // Replace this comment with your code
+    int i = 0;
+    int t = 0;
+    String string = "";
+       while(i < sentences.length){
+            while(t < sentences[i].length()){
+                while((t < sentences[i].length()) && (sentences[i].charAt(t) != ' ')){
+                    string += sentences[i].charAt(t);
+                    t++;
+                }
+                if(isEquals(string, keywords)){
+                    System.out.println(sentences[i]);
+                }
+                t++;
+                string = "";
+       }
+       i++;
+       t = 0;
     }
-}
+        }
+    
+
+
+     
+
+
+
+    }
+    
+    
+    
+    
+    
+    
+   
+
+
