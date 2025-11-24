@@ -1,5 +1,3 @@
-
-
 public class TesterArrayCharOps {
 
     public static void main(String[] args) {
@@ -97,6 +95,7 @@ public class TesterArrayCharOps {
         char[] arr1 = "Somebody stop me".toCharArray();
         boolean test1 = ArrCharOps.equals(ArrCharOps.subArray(arr1, 0, 8), "Somebody".toCharArray());
         boolean test2 = ArrCharOps.equals(ArrCharOps.subArray(arr1, 9, 16), "stop me".toCharArray());
+        
 
         int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0);
         String verdict = passed == num_tests ? "(Passed)": "(Failed)";
@@ -111,7 +110,7 @@ public class TesterArrayCharOps {
         boolean test1 = ArrCharOps.compareTo("abc", "abc") == 0;
         boolean test2 = ArrCharOps.compareTo("abc", "aBc") == 1;
         boolean test3 = ArrCharOps.compareTo("abc", "abcd") == -1;
-
+        
         int res = ArrCharOps.compareTo("abc", "");
         boolean test4 = res != 0 && res != -1 && res != 1;
 

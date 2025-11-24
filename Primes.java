@@ -1,5 +1,32 @@
 public class Primes {
     public static void main(String[] args) {
-        // Replace this statement with your code
+        final int N = Integer.parseInt(args[0]);
+        int i = 2;
+        int j = 2;
+        int count = 0;
+        boolean isPrime = true;
+        System.out.println("Prime numbers up to " + N + ":");
+        while(i <= N){
+            while(j < i){
+                if(i % j == 0){
+                    j = i;
+                    isPrime = false;
+                }
+                else{
+                    j++;
+                }
+            }
+            if(isPrime){
+                System.out.println(i);
+                count++;
+            }
+            j = 2;
+            i++;
+            isPrime = true;
+        }
+
+        int precentage = ((count * 100) / N);
+        System.out.println("There are " + count + " primes between 2 and " + N + " (" + precentage + "% are primes)");
+        
     }
 }
