@@ -95,8 +95,7 @@ public class TesterArrayCharOps {
         char[] arr1 = "Somebody stop me".toCharArray();
         boolean test1 = ArrCharOps.equals(ArrCharOps.subArray(arr1, 0, 8), "Somebody".toCharArray());
         boolean test2 = ArrCharOps.equals(ArrCharOps.subArray(arr1, 9, 16), "stop me".toCharArray());
-        System.out.println(test1);
-        System.out.println(test2);
+        
 
         int passed = (test1 ? 1 : 0) + (test2 ? 1 : 0);
         String verdict = passed == num_tests ? "(Passed)": "(Failed)";
