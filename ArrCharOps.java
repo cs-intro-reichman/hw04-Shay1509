@@ -113,14 +113,13 @@ public class ArrCharOps {
     public static int lastIndexOf(char[] arr, char ch) {
         int i = arr.length - 1;
         int occurrence = -1;
-        while(i > 0){
+        while(i >= 0){
             if(charAt(arr, i) == ch){
                 occurrence = i;
                 i = 0;
             }
-            else{
                 i--;
-            }
+            
         }
         return occurrence;
     }

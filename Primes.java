@@ -5,6 +5,7 @@ public class Primes {
         int j = 2;
         int count = 0;
         boolean isPrime = true;
+        System.out.println("Prime numbers up to " + N + ":");
         while(i <= N){
             while(j < i){
                 if(i % j == 0){
